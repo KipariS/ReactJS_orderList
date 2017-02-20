@@ -1,46 +1,45 @@
 /*
-  Possible Animations:
-  enter
-  leave
-  appear Must set transitionAppear={true} on animation component 
+	Possible Animations:
+	enter
+	leave
+	appear Must set transitionAppear={true} on animation component 
 */
 
-.order-enter
-  transition all 0.5s
-  transform translateX(-120%)
-  max-height 0
-  padding 0 !important
-  &.order-enter-active
-    max-height 60px
-    padding 2rem 0 !important
-    background white
-    transform translateX(0)
+.olist-enter
+	transition all 0.5s
+	transform translateX(-120%)
+	padding 0
+	max-height 0
+	&.olist-enter-active
+		transform translateX(0%)
+		padding 2rem 0
+		max-height 10rem
 
-.order-leave
-  transition all 0.5s
-  transform translateX(0)
-  &.order-leave-active
-    max-height 0
-    padding 0
-    transform translateX(120%)
+.olist-leave
+	transition all 0.5s
+	transform translateX(0%)
+	padding 2rem 0
+	max-height 10rem
+	
+	&.olist-leave-active
+		transform translateX(120%)
+		padding 0
+		max-height 0
 
 
-.count-enter
-  transition all 0.25s
-  transform translateY(100%)
-  &.count-enter-active
-    opacity 1
-    transform translateY(0)
-    
-    
-  
-.count-leave
-  transition all 0.25s
-  left 0
-  bottom 0
-  transform translateY(0)
-  position absolute !important
-  &.count-leave-active
-    transform translateY(-100%)
-    
-  
+.counter-enter
+	transition all .3s
+	transform translateY(-120%)
+	&.counter-enter-active
+		transform translateY(0%)
+
+.counter-leave
+	transition all .3s
+	transform translateY(0%)
+	position absolute !important
+	left 0
+	bottom 0
+	&.counter-leave-active
+		transform translateY(120%)
+
+
